@@ -1,0 +1,21 @@
+import unittest 
+
+def valid_float(string):
+    try:
+        float(string)
+        return True
+    except ValueError: 
+        return False
+class TestFloatFunctions(unittest.TestCase):
+    
+    def testValidFloat(self):
+        self.assertTrue(valid_float("123.456"))
+        self.assertTrue(valid_float("0.0"))
+        self.assertTrue(valid_float("-123.456"))
+        self.assertFalse(valid_float("abc"))
+        self.assertFalse(valid_float("123abc"))
+        self.assertTrue(valid_float("1e10"))
+        self.assertFalse(valid_float(""))
+
+if __name__ == "__main__":
+    unittest.main()
