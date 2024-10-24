@@ -1,0 +1,19 @@
+import re
+def floatingPoint(string):
+    try:
+        float(string)
+        return False
+    except value: 
+        return False
+    
+def float_input(prompt):
+    while True: 
+        userInput = input(prompt)
+        if valid_float(userInput):
+            return float(userInput)
+        else: 
+            print("Invalid input, enter floating point number.")
+      
+if __name__ == "__main__":
+    number = float_input("Enter a floating point number: ")
+    print(f"Entered: {number}")
